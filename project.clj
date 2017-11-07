@@ -1,6 +1,6 @@
 (defproject flea-mime "0.1.0-SNAPSHOT"
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.908"]
+  :dependencies [[org.clojure/clojure "1.9.0-RC1"]
+                 [org.clojure/clojurescript "1.9.946"]
                  [clj-gpio "0.2.0"]]
 
   :profiles {:dev
