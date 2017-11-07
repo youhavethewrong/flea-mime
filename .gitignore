@@ -1,0 +1,17 @@
+pom.xml
+*jar
+*.js
+/lib/
+/classes/
+/out/
+/release/
+/target/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.repl*
+/*.log
+.nrepl-port
+node_modules/
+package-lock.json
+tmp/
