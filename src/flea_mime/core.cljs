@@ -6,16 +6,16 @@
 (node/enable-util-print!)
 (.on js/process "uncaughtException" #(js/console.error %))
 
-(defonce fs (node/require "fs"))
+(def gpio-ports [2 3 4 14 15 18 17 27 22 23 24 10 9 11 25 8 7])
 
-(defn eat-tacos
-  [filename]
-  (.writeFileSync fs filename (pprint/write {:tacos "delicious"} :pretty true :stream nil)))
+(defn gpio-stroll
+  [ports]
+  (doseq [port ports]
+    (println "Port" port "is currently" (gpio/read-value (gpio/open-port port)))))
 
 (defn -main
   [& args]
-  ;; implement brilliant stuff
-  (println "Yeah yeah yeah...")
-  )
+  (println "Dumping GPIO port statuses.")
+  (gpio-stroll gpio-ports))
 
 (set! *main-cli-fn* -main)
