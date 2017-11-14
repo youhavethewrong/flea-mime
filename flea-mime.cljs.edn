@@ -1,0 +1,6 @@
+{:require [flea-mime.core]
+ :compiler-options {:optimizations :simple
+                    :static-fns true
+                    :fn-invoke-direct true
+                    :target :nodejs
+                    :optimize-constants true}}
